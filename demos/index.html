@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>jquery.easyfloater.js Sample</title>
+<script src="../lib/jquery.js"></script>
+<script src="../dist/jquery.easyfloater.js"></script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+[data-easyfloater] {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	width: 100%;
+	background: #fcc;
+	text-align: center;
+	padding: 20px 0;
+}
+#page {
+	height: 2000px;
+	padding: 500px 0;
+	text-align: center;
+	background: #ccf;
+}
+</style>
+<script>
+$(function () {
+	$('[data-easyfloater]').easyfloater();
+});
+</script>
+</head>
+
+<body>
+<div data-easyfloater>
+easyfloater
+</div>
+<div id="page">
+page
+</div>
+</body>
+</html>
