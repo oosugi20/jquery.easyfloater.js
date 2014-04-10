@@ -78,7 +78,12 @@ Module = function (element, options) {
 		var duration = this.options.slideOutDuration;
 		var shift_y = this.shift_y;
 		if (this._state === 'hidden') { return; }
-		this.$el.stop(false, true).animate({ top: shift_y }, { duration: duration });
+		this.$el.stop(false, true).animate({ top: shift_y }, {
+			duration: duration,
+			complete: function () {
+				$(this).hide();
+			}
+		});
 		this._state = 'hidden';
 	};
 
