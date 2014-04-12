@@ -1,6 +1,6 @@
 /*! jquery.easyfloater.js (git@github.com:oosugi20/jquery.easyfloater.js.git)
 * 
- * lastupdate: 2014-04-11
+ * lastupdate: 2014-04-13
  * version: 0.1.0
  * author: Makoto OOSUGI <oosugi20@gmail.com>
  * License: MIT
@@ -48,7 +48,7 @@ Module = function (element, options) {
 	 */
 	fn._eventify = function () {
 		var _this = this;
-		$(window).on('onload scroll', function () {
+		$(window).on('load scroll', function () {
 			if (_this.isCollision()) {
 				_this.show();
 			} else {

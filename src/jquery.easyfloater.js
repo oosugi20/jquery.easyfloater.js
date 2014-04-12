@@ -41,7 +41,7 @@ Module = function (element, options) {
 	 */
 	fn._eventify = function () {
 		var _this = this;
-		$(window).on('onload scroll', function () {
+		$(window).on('load scroll', function () {
 			if (_this.isCollision()) {
 				_this.show();
 			} else {
