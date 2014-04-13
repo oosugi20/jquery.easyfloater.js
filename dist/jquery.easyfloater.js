@@ -1,6 +1,6 @@
 /*! jquery.easyfloater.js (git@github.com:oosugi20/jquery.easyfloater.js.git)
 * 
- * lastupdate: 2014-04-13
+ * lastupdate: 2014-04-14
  * version: 0.1.0
  * author: Makoto OOSUGI <oosugi20@gmail.com>
  * License: MIT
@@ -74,7 +74,7 @@ Module = function (element, options) {
 		var duration = this.options.slideInDuration;
 		if (this._state === 'showed') { return; }
 		this.$el.show();
-		this.$el.stop(false, true).animate({ top: 0 }, { duration: duration });
+		this.$el.stop(true, false).animate({ top: 0 }, { duration: duration });
 		this._state = 'showed';
 	};
 
@@ -85,7 +85,7 @@ Module = function (element, options) {
 		var duration = this.options.slideOutDuration;
 		var shift_y = this.shift_y;
 		if (this._state === 'hidden') { return; }
-		this.$el.stop(false, true).animate({ top: shift_y }, {
+		this.$el.stop(true, false).animate({ top: shift_y }, {
 			duration: duration,
 			complete: function () {
 				$(this).hide();
